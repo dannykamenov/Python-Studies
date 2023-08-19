@@ -40,3 +40,4 @@ print(df2.describe())
 #dataframe[dataframe.columnName.isin(['value1','value2'])] # filter by values
 #dataframe.reset_index(drop=True) # reset index
 #dataframe.reset_index(drop=True,inplace=True) # reset index in place, drop old index, modifies current dataframe
+#dataframe.apply(function) # apply function to every row
