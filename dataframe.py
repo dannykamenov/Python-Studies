@@ -37,3 +37,6 @@ print(df2.describe())
 #pd.columnName # select column by name
 #pd['columnName'] # select column by name
 #pd[['columnName1','columnName2']] # select two columns by name
+#dataframe[dataframe.columnName.isin(['value1','value2'])] # filter by values
+#dataframe.reset_index(drop=True) # reset index
+#dataframe.reset_index(drop=True,inplace=True) # reset index in place, drop old index, modifies current dataframe
