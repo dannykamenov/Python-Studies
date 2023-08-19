@@ -41,3 +41,4 @@ print(df2.describe())
 #dataframe.reset_index(drop=True) # reset index
 #dataframe.reset_index(drop=True,inplace=True) # reset index in place, drop old index, modifies current dataframe
 #dataframe.apply(function) # apply function to every row
+#dataframe.apply(function,axis=1) # apply function to every column
