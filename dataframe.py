@@ -26,3 +26,14 @@ print(df2.dtypes)
 print(df2.index)
 print(df2.to_numpy())
 print(df2.describe())
+
+#pd.read_csv('data.csv')
+#pd.read_excel('data.xlsx',sheet_name='Sheet1')
+#pd.read_sql('SELECT * FROM data',connection_object)
+#pd.read_json('https://api.github.com/users/hadley/orgs')
+#pd.iloc[0] # first row of data frame
+#pd.iloc[1] # second row of data frame
+#pd.iloc[-1] # last row of data frame
+#pd.columnName # select column by name
+#pd['columnName'] # select column by name
+#pd[['columnName1','columnName2']] # select two columns by name
