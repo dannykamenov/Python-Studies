@@ -42,3 +42,12 @@ print(df2.describe())
 #dataframe.reset_index(drop=True,inplace=True) # reset index in place, drop old index, modifies current dataframe
 #dataframe.apply(function) # apply function to every row
 #dataframe.apply(function,axis=1) # apply function to every column
+#dataframe.column.command() - commands listed below until "unique"
+#mean	Average of all values in column
+#std	Standard deviation
+#median	Median
+#max	Maximum value in column
+#min	Minimum value in column
+#count	Number of values in column
+#nunique	Number of unique values in column
+#unique	List of unique values in column
