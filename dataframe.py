@@ -51,3 +51,7 @@ print(df2.describe())
 #count	Number of values in column
 #nunique	Number of unique values in column
 #unique	List of unique values in column
+#dataframe.groupby('columnName').mean() # get mean of each column with unique values of columnName
+#dataframe.groupby(['columnName1','columnName2']).mean() # get mean of each column with unique values of columnName1 and columnName2
+#dataframe.pivot(index='columnName',columns='columnName2',values='columnName3') # create pivot table that groups by columnName1 and calculates the mean of columnName2 and columnName3
+#dataframe.groupby('columnName').agg(np.mean) # find the average across all columns for every unique columnName
