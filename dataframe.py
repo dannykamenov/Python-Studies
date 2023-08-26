@@ -93,4 +93,12 @@ print(df2.describe())
 #dataframe.apply(np.max,axis=1) # apply the function np.max() across each row
 #dataframe.apply(lambda x: x.max() - x.min()) # apply the function x.max() - x.min() across each column
 #dataframe['column1'].apply(lambda x: 1 if x > 0 else 0) # apply the function x > 0 ? 1 : 0 across each value in column1
-
+#scipy - trim_mean(dataframe['column1'],0.1) # trim the mean of column1 by 10%
+#dataframe.column.max() # find the max of column
+#dataframe.column.min() # find the min of column
+#dataframe.column.quantile(0.25) # find the 25th percentile of column
+#scipy - stats.iqr(dataframe.column) # find the interquartile range of column
+#dataframe.column.var() # find the variance of column
+#dataframe.column.std() # find the standard deviation of column
+#dataframe.column.mad() # find the mean absolute deviation of column
+#dataframe.column.skew() # find the skewness of column
