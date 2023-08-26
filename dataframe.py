@@ -56,3 +56,4 @@ print(df2.describe())
 #dataframe.pivot(index='columnName',columns='columnName2',values='columnName3') # create pivot table that groups by columnName1 and calculates the mean of columnName2 and columnName3
 #dataframe.groupby('columnName').agg(np.mean) # find the average across all columns for every unique columnName
 #dataframe['column] = dataframe['column'].astype(float) # convert the datatype of the series to float
+#dataframe['column'] = pd.Categorical(dataframe['column'], [1,2,3,4], ordered=True) # convert the datatype of the series to categorical with ordering
