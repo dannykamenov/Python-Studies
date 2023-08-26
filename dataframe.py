@@ -102,3 +102,8 @@ print(df2.describe())
 #dataframe.column.std() # find the standard deviation of column
 #dataframe.column.mad() # find the mean absolute deviation of column
 #dataframe.column.skew() # find the skewness of column
+#seaborn as sns - sns.boxplot(x='column1',y='column2',data=dataframe) # create a boxplot of column1 and column2
+#seaborn as sns - sns.histplot(dataframe.column1,kde=False) # create a histogram of column1
+#seaborn as sns - sns.distplot(dataframe.column1,kde=False) # create a histogram of column1
+#seaborn as sns - sns.distplot(dataframe.column1) # create a histogram of column1
+#seaborn as sns - sns.countplot(x='column1',data=dataframe) # create a histogram of column1
