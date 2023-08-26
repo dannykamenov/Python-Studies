@@ -107,3 +107,4 @@ print(df2.describe())
 #seaborn as sns - sns.distplot(dataframe.column1,kde=False) # create a histogram of column1
 #seaborn as sns - sns.distplot(dataframe.column1) # create a histogram of column1
 #seaborn as sns - sns.countplot(x='column1',data=dataframe) # create a histogram of column1
+#dataframe.column.value_counts().plot().pie() # create a pie chart of column1
