@@ -114,3 +114,4 @@ print(df2.describe())
 #plt.ylable('something') # label the y axis
 #np.cov(dataframe.column1,dataframe.column2) # find the covariance between column1 and column2
 #scipy.stats - pearsonr(dataframe.column1,dataframe.column2) # find the pearson correlation between column1 and column2
+#pd.crosstab(dataframe.column1,dataframe.column2) # create a cross tabulation of column1 and column2, divide by len(dataframe) to get percentage
