@@ -109,3 +109,4 @@ print(df2.describe())
 #seaborn as sns - sns.countplot(x='column1',data=dataframe) # create a histogram of column1
 #dataframe.column.value_counts().plot().pie() # create a pie chart of column1
 #plt.hist(dataframe.column1, color='something',label='something',normed=True//renamed to density) # create a histogram of column1
+#plt.scatter(x=dataframe.column1,y=dataframe.column2) # create a scatter plot of column1 and column2
