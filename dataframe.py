@@ -110,3 +110,7 @@ print(df2.describe())
 #dataframe.column.value_counts().plot().pie() # create a pie chart of column1
 #plt.hist(dataframe.column1, color='something',label='something',normed=True//renamed to density) # create a histogram of column1
 #plt.scatter(x=dataframe.column1,y=dataframe.column2) # create a scatter plot of column1 and column2
+#plt.xlable('something') # label the x axis
+#plt.ylable('something') # label the y axis
+#np.cov(dataframe.column1,dataframe.column2) # find the covariance between column1 and column2
+#scipy.stats - pearsonr(dataframe.column1,dataframe.column2) # find the pearson correlation between column1 and column2
