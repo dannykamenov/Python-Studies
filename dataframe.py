@@ -116,3 +116,4 @@ print(df2.describe())
 #scipy.stats - pearsonr(dataframe.column1,dataframe.column2) # find the pearson correlation between column1 and column2
 #pd.crosstab(dataframe.column1,dataframe.column2) # create a cross tabulation of column1 and column2, divide by len(dataframe) to get percentage
 #dataframe.sum(axis=0) # find the sum of all values in column, can be used to sum cross tabulation
+#chi2,p,dof,expected = scipy.stats.chi2_contingency(pd.crosstab(dataframe.column1,dataframe.column2)) # find the chi squared statistic comparing column1 and column2
