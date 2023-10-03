@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+</head>
+<body>
+    <h1>Background Remover</h1>
+    <form action="/process" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Remove Background</button>
+    </form>
+    <div id="result">
+        <a id="download-link" style="display: none;" download="output_image.png">Download Result</a>
+        <img id="output-image" src="" alt="Result" style="display: none;">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
