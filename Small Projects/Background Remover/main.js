@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Display the processed image in the preview container
             outputImage.src = URL.createObjectURL(blob);
             outputImage.style.display = 'block';
-            console.log(URL.createObjectURL(blob))
-            console.log(blob)
         })
         .catch(error => {
             console.error('Error:', error);
