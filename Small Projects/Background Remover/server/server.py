@@ -3,6 +3,7 @@ from rembg import remove
 import tempfile
 from io import BytesIO
 from flask_cors import CORS
+from PIL import Image
 
 app = Flask(__name__)
 CORS(app)
