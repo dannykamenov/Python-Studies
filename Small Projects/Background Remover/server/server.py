@@ -19,17 +19,23 @@ def process():
     if input_image.filename == '':
         return 'No selected file'
 
-    with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_input, \
-         tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_output:
+    # Create a temporary file to save the resized image
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_resized_output:
 
-        input_image.save(temp_input.name)
+        # Load the input image using PIL
+        input_image_pil = Image.open(input_image)
 
-        temp_input_path = temp_input.name  # Get the file path from the temporary file object
+        # Resize the image to your desired dimensions
+        resized_image = input_image_pil.resize((800, 800))
 
-        with open(temp_input_path, 'rb') as input_file:
-            input_bytes = input_file.read()
+        # Save the resized image to the temporary file
+        resized_image.save(temp_resized_output.name, format='PNG')
 
-        # Process the image
+        # Read the resized image as bytes
+        with open(temp_resized_output.name, 'rb') as resized_file:
+            input_bytes = resized_file.read()
+
+        # Process the resized image
         output_bytes = remove(input_bytes)
 
         # Store the processed image data in the global variable
