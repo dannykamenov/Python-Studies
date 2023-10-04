@@ -2,8 +2,10 @@ from flask import Flask, request, send_file
 from rembg import remove
 import tempfile
 from io import BytesIO
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Initialize a global variable to store the processed image data
 processed_image_data = None
