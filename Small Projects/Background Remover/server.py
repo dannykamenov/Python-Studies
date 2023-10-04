@@ -10,10 +10,6 @@ CORS(app)
 # Initialize a global variable to store the processed image data
 processed_image_data = None
 
-@app.route('/')
-def index():
-    return open('index.html').read()
-
 @app.route('/process', methods=['POST'])
 def process():
     global processed_image_data
