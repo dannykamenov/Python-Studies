@@ -13,7 +13,6 @@
     </form>
     <!-- Display the processed image in a small preview area -->
     <div id="result">
-        <a id="download-link" style="display: none;" download="output_image.png">Download Result</a>
         <div id="preview-container" style="width: 300px; height: 300px; overflow: hidden;">
             <img id="output-image" src="" alt="Result" width="300" height="300">
         </div>
@@ -25,7 +24,6 @@
         document.addEventListener('DOMContentLoaded', function() {
     const removeButton = document.getElementById('remove-button');
     const outputImage = document.getElementById('output-image');
-    const downloadLink = document.getElementById('download-link');
 
     // Add an event listener to the Remove Background button
     removeButton.addEventListener('click', function() {
@@ -43,12 +41,6 @@
             // Display the processed image in the preview container
             outputImage.src = URL.createObjectURL(blob);
             outputImage.style.display = 'block';
-
-            // Show the download link
-            downloadLink.style.display = 'block';
-
-            // Update the download link URL
-            downloadLink.href = URL.createObjectURL(blob);
         })
         .catch(error => {
             console.error('Error:', error);
