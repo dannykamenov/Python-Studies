@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData();
         formData.append('image', document.querySelector('input[type="file"]').files[0]);
 
-        // Send a POST request to the /process endpoint using Fetch API
+        // Send a POST request to the /process endpoint using Fetch 
         fetch('http://127.0.0.1:5000/process', {
             method: 'POST',
             body: formData,
