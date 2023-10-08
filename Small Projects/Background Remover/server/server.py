@@ -52,7 +52,7 @@ def download():
     if processed_image_data is None:
         return 'No processed image data available'
 
-    # You can generate a unique filename for the downloaded image or use a fixed name
+    # You can generate a unique filename for the downloaded image or use a fixed name!
     download_name = 'processed_image.png'
 
     # Send the processed image for download
