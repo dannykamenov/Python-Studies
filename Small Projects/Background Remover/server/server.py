@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# Initialize a global variable to store the processed image data
+
 processed_image_data = None
 
 @app.route('/process', methods=['POST'])
@@ -24,18 +24,15 @@ def process():
 
         input_image.save(temp_input.name)
 
-        temp_input_path = temp_input.name  # Get the file path from the temporary file object
+        temp_input_path = temp_input.name  
 
         with open(temp_input_path, 'rb') as input_file:
             input_bytes = input_file.read()
 
-        # Process the image
         output_bytes = remove(input_bytes)
 
-        # Store the processed image data in the global variable
         processed_image_data = output_bytes
 
-        # Create a BytesIO object to store the processed image
         output_buffer = BytesIO()
         output_buffer.write(output_bytes)
         output_buffer.seek(0)
@@ -52,12 +49,10 @@ def download():
     if processed_image_data is None:
         return 'No processed image data available'
 
-    # You can generate a unique filename for the downloaded image or use a fixed name!
     download_name = 'processed_image.png'
 
-    # Send the processed image for download
     return send_file(
-        BytesIO(processed_image_data),  # Use BytesIO to create a file-like object
+        BytesIO(processed_image_data), 
         as_attachment=True,
         download_name=download_name,
         mimetype='image/png'
