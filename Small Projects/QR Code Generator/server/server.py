@@ -31,7 +31,7 @@ def index():
 @app.template_filter('b64encode')
 def b64encode(s):
     import base64
-    return base64.b64encode(s).decode('utf-8')  # Here, we're encoding the bytes directly
+    return base64.b64encode(s).decode('utf-8') 
 
 if __name__ == '__main__':
     app.run(debug=True)
