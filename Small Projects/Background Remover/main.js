@@ -9,9 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('image', document.querySelector('input[type="file"]').files[0]);
 
         // Send a POST request to the /process endpoint using Fetch API
-        fetch('https://bg-remover-bggp.onrender.com/process', {
+        fetch('https://bg-remover-2-0.onrender.com/process', {
             method: 'POST',
             body: formData,
+            // add cors mode
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            },
+            mode: 'no-cors'
         })
         .then(response => response.blob())
         .then(blob => {
