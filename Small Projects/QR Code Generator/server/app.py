@@ -20,7 +20,4 @@ def generate_qr():
     return jsonify({"qr_code": img_base64})
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
