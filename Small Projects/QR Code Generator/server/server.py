@@ -1,39 +1,26 @@
-from flask import Flask, render_template_string, request
+from flask import Flask, render_template_string, request, jsonify
 import qrcode
 from io import BytesIO
 from flask_cors import CORS
+import base64
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    data = None
-    if request.method == 'POST':
-        data = request.form.get('data')
+@app.route('/generate_qr', methods=['POST'])
+def generate_qr():
+    data = request.json.get('data')
     
-    img_io = None
-    if data:
-        img = qrcode.make(data)
-        img_io = BytesIO()
-        img.save(img_io, 'PNG')
-        img_io.seek(0)
+    img_io = BytesIO()
+    img = qrcode.make(data)
+    img.save(img_io, 'PNG')
+    img_io.seek(0)
     
-    return render_template_string('''
-    <form method="post">
-        Data: <input type="text" name="data">
-        <input type="submit" value="Generate QR">
-    </form>
-    {% if img_io %}
-        <h2>Your QR Code:</h2>
-        <img src="data:image/png;base64,{{ img_io.getvalue() | b64encode }}">
-    {% endif %}
-    ''', img_io=img_io)
+    img_base64 = base64.b64encode(img_io.getvalue()).decode('utf-8')
+    return jsonify({"qr_code": img_base64})
 
-@app.template_filter('b64encode')
-def b64encode(s):
-    import base64
-    return base64.b64encode(s).decode('utf-8') 
+if __name__ == '__main__':
+    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
