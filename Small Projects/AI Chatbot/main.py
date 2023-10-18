@@ -1,5 +1,5 @@
 import openai
-
+#fake key!
 openai.api_key = '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'
 
 def chat_with_gpt(prompt):
