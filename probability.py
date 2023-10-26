@@ -15,3 +15,7 @@ from matplotlib import pyplot as plt
 # simulates rolling a six-sided die 100 times.
 # The result of each roll is stored in rolls.
 # We can use plt.hist to display the results of a simulation.
+# plt.hist(rolls, bins=6)
+# simulates rolling a six-sided die 100 times, and then displays a histogram of the results.
+# The bins argument tells plt.hist how many bars to display.
+# In this case, there will be a bar for each possible number that the die could land on (1 through 6).
